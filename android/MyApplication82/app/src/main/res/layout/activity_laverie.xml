@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.alexa.myapplication.LaverieActivity"
+    android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar">
+
+    <ImageButton
+        android:id="@+id/laverie_deconnect_button"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/deconnect"
+        android:onClick="finish"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@id/laverie_deconnect_button">
+
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b1"
+            android:text="1"
+            style="@style/laveriebutton"/>
+
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b2"
+            style="@style/laveriebutton"
+            android:layout_toRightOf="@id/b1"
+            android:text="2" android:layout_toEndOf="@id/b1" />
+
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b3"
+            android:layout_below="@id/b1"
+            android:text="3"
+            style="@style/laveriebutton"/>
+
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b4"
+            android:layout_toRightOf="@id/b3"
+            android:layout_below="@id/b2"
+            android:text="4"
+            style="@style/laveriebutton"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/line"
+        android:layout_below="@id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:text="_________________________________________"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/line">
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b5"
+            android:text="5"
+            style="@style/laveriebutton"/>
+
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b6"
+            android:layout_toRightOf="@id/b5"
+            android:text="6"
+            style="@style/laveriebutton"/>
+
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b7"
+            android:layout_below="@id/b5"
+            android:text="7"
+            style="@style/laveriebutton"/>
+
+        <com.example.alexa.myapplication.LaverieButton
+            android:id="@+id/b8"
+            android:layout_toRightOf="@id/b7"
+            android:layout_below="@id/b5"
+            android:text="8"
+            style="@style/laveriebutton"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/statButton"
+        android:src="@drawable/statistics_icon"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        style="@style/laveriebutton"/>
+
+</RelativeLayout>

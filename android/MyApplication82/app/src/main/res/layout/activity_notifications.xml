@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/notifications_deconnect_button"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/deconnect"
+        android:onClick="finish"
+        />
+
+    <TextView
+        android:id="@+id/letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/letterView"
+        android:layout_below="@id/notifications_deconnect_button"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <RelativeLayout
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/letter">
+
+        <TextView
+            android:id="@+id/mailtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Courriels de la Maisel :"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <ExpandableListView
+            android:id="@+id/list"
+            android:layout_below="@id/mailtitle"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+    </RelativeLayout>
+</RelativeLayout>

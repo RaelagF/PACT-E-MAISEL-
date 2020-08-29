@@ -1,0 +1,52 @@
+=== Diagramme d’avancement des tâches (PAN4)
+
+//*Mettre à jour le* Tableau *à chaque PAN*
+
+//Vous devez y résumer l’avancement de vos modules.
+
+//L’avancement est mesuré par rapport à l’ensemble du travail à effectuer. L’avancement prévu correspond à l’avancement prévu au PANx, tel que
+//renseigné dans votre diagramme temporel. L’avancement réel est ce que vous avez réellement atteint.
+
+//Vous préciserez également le temps passé sur le module, afin d’apprendre à évaluer la durée des tâches.
+
+//La description du travail effectué est brève mais vous devez absolument rencontrer votre expert (encadrant de module) pour qu’il détaille ses attentes en termes de rendus dans la fiche module qu’il vous remettra.
+//Avant chaque PAN vous devrez le rencontrer pour récupérer une appréciation de votre travail.
+
+//Lorsque vous estimerez votre module terminé, vous demanderez une soutenance afin d’être évalué et d’obtenir une note de module. Lasoutenance s’effectue devant au moins deux enseignants.
+
+[width="100%",cols="8%,9%,9%,7%,67%",options="header",]
+|=======================================================================
+|Module |Avancement Prévu (%) |Avancement Réel (%) |Temps passé (h)
+|Description brève du travail effectué, analyse des écarts constatés
+|Module SES |100% |100% |3h entretiens, 3h rapport |Les entretiens sont terminés – Un rapport a été transmis à l’expert – 3 réunions
+ont eu lieu jusqu'au PAN2, date à laquelle nous avons clôturé ce module.
+
+|Module ANDROID |100% |90% |70h chacun au moins | Les activités sont presque toutes dans leur état final -
+réunion avec l'expert toutes les 2 ou 3 semaines. Les écarts d'avancement sont dus à des bugs à résoudre, à un apprentissage
+plus lent que prévu ou à une interface graphique à légèrement améliorer.
+
+|Base de données |100% |100% |70h |On a appris la normalisation de la base de données
+(de 1NF à 3NF). On a fait le schéma logique de notre base de données en respectant
+les règles de normalisation (PAN2). On a créé les tables pour toutes les parties de notre
+projet. On a fait toutes les fonctiones définies dans l'interface (PAN3). 
+On a ajouté les multi-threads pour permettre des connections simultanées.
+On a réussi à  envoyer des données au Hardware et à l’application Androïd et
+ recevoir leurs requêtes (PAN4).
+
+
+| Hardware |100% | 90%|30h+20h+15h Soline 40h+10h+15h Florian   (pan2+pan3+pan4)
+ | Mise au point des codes : Commentaires et optimisation .. Mise en forme : Boites et assemblages .. 
+ 
+
+  |Client Serveur| 100% |100% | 30h chacun + 40h (pan4) 
+  | Architecture finale adoptée. Utilisation des sockets et de UDP. Meilleure fiabilité. 
+  Serveur global en Python. Modification de tous les codes Arduino. 
+  Ajout de fonctions pour la communication Java/Serveur. 
+
+|Tests et intégration  |100% |90% |30h
+| Intégration finale de tous les modules, qui communiquent entre eux comme attendu.
+Les deux serveurs Python du PAN3 sont rassemblés en un seul serveur à multi-threads.
+Plan de tests effectué.
+
+
+|=======================================================================

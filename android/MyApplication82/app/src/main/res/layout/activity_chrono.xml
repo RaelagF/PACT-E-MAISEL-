@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageButton
+        android:id="@+id/minuteur_deconnect_button"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/deconnect"
+        android:onClick="finish"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <Chronometer
+            android:id="@+id/chronometre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#79a29d"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:onClick="startChronometer"
+            android:layout_below="@id/chronometre"
+            android:background="#79a29d"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="5dp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:onClick="stopChronometer"
+            android:layout_toRightOf="@id/button1"
+            android:layout_below="@id/chronometre"
+            android:background="#79a29d"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="5dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

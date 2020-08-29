@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="machinewidth"></dimen>
+    <dimen name="actionBarSize">50dp</dimen>
+    <dimen name="laveriebutton">80dp</dimen>
+    <dimen name="accueilButton">90dp</dimen>
+</resources>

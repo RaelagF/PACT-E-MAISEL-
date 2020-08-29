@@ -1,0 +1,14 @@
+////
+*_Note : Liste des références exploitées. Une référence complète
+donne titre, auteur(s), date, journal, revue, source de publication,
+titre de conférence, numéro, pages. Une webographie est aussi
+envisageable : titre, auteur, date, page web_*
+////
+
+Pour l'état de l'art :
+
+* [[a1]][1] Les logements connectés deviennent une réalité, Laurence Boccara, 23/11/17, http://www.lemonde.fr/immobilier/article/2016/02/13/les-logements-connectes-deviennent-une-realite_4864836_1306281.html
+* [[a2]][2] La résidence étudiante entièrement connectée, Gérald Camier, 23/11/17, https://www.ladepeche.fr/article/2017/05/03/2567138-la-residence-etudiante-entierement-connectee.html
+* [[a3]][3] La cuisine connectée, c’est quoi ? Pierrick LABBE, 23/11/17, https://www.objetconnecte.net/cuisine-connectee-explications-3101/
+* [[a4]][4] Lavobox, 23/11/17, http://www.lavomatique.fr/lavobox/lavobox.htm
+* [[a5]][5] Domotiser sa boîte aux lettres, 23/11/17, http://techno-bidouille.com/domotiser-sa-boite-aux-lettres/

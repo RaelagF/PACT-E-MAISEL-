@@ -1,0 +1,8 @@
+Le serveur a été upload dans la branche Base_de_données par Guyu Fang 
+
+Le système Client/Serveur est donc délocalisé en 3 parties: Android, Base de données, et Hardware. 
+
+Pour eviter les doublons le code en python n'est pas disponible dans ce dossier mais bien dans base de données. 
+
+Services.py reprends en quelques sortes les messages des descriptions prévus par le PAN1 et adaptées à la suite du projet. 
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    tools:context="com.example.alexa.myapplication.CuisineActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/statButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/stat"
+            android:onClick="page_1"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@id/minuteurButton"
+            android:background="@color/white"
+            android:layout_marginHorizontal="20dp"/>
+
+        <ImageButton
+            android:id="@+id/minuteurButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:onClick="page1"
+            android:textSize="15dp"
+            android:src="@drawable/minuteur"
+            android:scaleType="fitXY"
+            android:background="@color/white"
+            android:layout_marginHorizontal="20dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/spinner_text"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/spinner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Choisir l'étage : "
+        android:textColor="#79a29d"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="#79a29d"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personnes présentes :"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/personnes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="100dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="#79a29d"
+            android:layout_toRightOf="@id/rel"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plaques disponibles :"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/plaques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="100dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    <ImageButton
+        android:id="@+id/cuisine_deconnect_button"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/deconnect"
+        android:onClick="finish"
+        />
+
+</RelativeLayout>

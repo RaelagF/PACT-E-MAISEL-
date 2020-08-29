@@ -1,0 +1,66 @@
+=== Suivis des modules (Après PAN1)
+
+//Insérez ici votre biblio et vos avancées techniques par module (réunions experts, pseudo-code d’algorithmes, description détaillée de vos réalisations, etc.).
+
+==== Module Android
+
+Bibliographie:
+
+https://developer.android.com/index.html
+
+https://openclassrooms.com/courses/creez-des-applications-pour-android/installation-et-configuration-des-outils
+
+https://stackoverflow.com/ - presque toutes les solutions ou exemples de notre projet ont été trouvés là-dessus.
+
+
+Nous avons, pour notre application créé une page permettant de se connecter, nommée LoginActivity. 
+Cette dernière permet de créer un compte pour ensuite se connecter ou tout simplement se connecter à l'aide d'une
+méthode entièrement programmée par nos soins.
+
+La page qui suit est la page d’accueil. Quatre boutons (des ImageButton plus précisément)
+y sont disposés, chacun représentant une autre activité, et nous avons créé
+des méthodes permettant d’accéder à ces pages - CuisineActivity, ParametresActivity, LingerieActivity,
+NotificationsActivity.
+
+Il y a de plus dans toutes les pages un bouton permettant de se déconnecter, qui fait simplement appel à la méthode finish dans AccueilActivity
+lorsque l’on clique dessus. Pour les autres activités, le bouton déconnection est différent, vu qu’il faut que l’activité
+en question se ferme, mais aussi l’activité mère. On ouvre les activités dans l’activité mère (AccueilActivity) avec la méthode
+startActivityForResult, puis on redéfinit la méthode onActivityResult toujours dans AccueilActivity qui permet lorsque l’on
+clique sur le bouton, de fermer l’activité fille et d’indiquer à la mère qu’elle doit aussi être fermée.
+
+Dans LingerieActivity, il y a 8 boutons indiquant l’état des machines (réservée, en cours
+d’utilisation, libre) récupéré avec des capteurs. Lorsque l’on clique sur une machine, une 
+boîte de dialogue se lance, implémentée à travers la classe DialogBox grâce aux méthodes onCreateDialog et AlertDialogBuilder.
+D'autres méthodes ont été écrites pour changer l'état de la machine, et donc sa couleur etc...
+
+Dans CuisineActivity, on a créé un spinner permettant de choisir le numéro de l’étage
+où la cuisine qui nous intéresse se trouve. On implémente aussi deux autres boutons,
+l’un permettant de lancer un minuteur, et un autre permettant d’aller vers la page des statistiques.
+
+Dans ParametresActivity, il y a un spinner permettant de choisir le numéro de l'étage par défaut.
+Il est de plus possible de modifier le mot de passe.
+
+Dans StatisticsActivity, il est possible de voir les statistiques sous formes de barres représentant l'affluence d'une journée
+sélectionnée à l'aide d'un spinner.
+
+Dans NotificationsActivity, il est possible de voir s'il y a du courrier à l'aide d'un TextView, et de consulter les mails récupérés depuis
+une boîte mail extérieure grâce à un protocole de récupération IMAP.
+
+=== Module Hardware 
+
+http://github.com
+
+Permet de trouver la majorité des bibilothèques ouvertes utilisés. 
+
+https://www.arduino.cc/en/Reference
+
+Permet de trouver des déscriptions précises de bibliothèques utlisés. 
+
+Pour les composants on se réfère au fiche produit en pdf souvent bien détaillés. 
+
+=== Module Client/Server 
+
+Stackoverflow: https://stackoverflow.com/ répond à beaucoup de petite questions de maitrise du code notamment pour du parsing en C;
+
+
+

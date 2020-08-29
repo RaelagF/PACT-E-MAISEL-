@@ -1,0 +1,58 @@
+=== Module Communication
+
+* Paul Boulanger
+* Florian Laborde
+
+Encadrant : Thomas Robert
+
+==== Descriptions
+
+Ce module comporte plusieurs sous-modules :
+
+* Transmission des données des capteurs à la base de données : Les différents 
+capteurs utilisés enregistrent des données en continu. La base de données doit 
+leur demander périodiquement de lui transmettre leur données, qu'elle traitera 
+et enregistrera. Il faut établir les protocoles de communication adaptés pour 
+ces échanges.
+
+* Communication entre la base de données et l'application Android client : 
+L'application envoie des requêtes au serveur pour qu'il lui transmette des 
+données, et la base de données lui répond. De plus, l'application peut demander 
+au serveur de mettre à jour ses données en lui en envoyant de nouvelles. Il faut 
+une fois de plus établir les protocoles de communication adaptés, peut-être plus 
+complexes.
+
+==== Avancement
+
+Objectifs PAN2 :
+
+* Avoir fixé les protocoles de communication que l'on utilisera, au moins pour 
+les flux de données connus à ce moment-là.
+
+* Avoir créé une connexion entre des capteurs et la base de données :
+** Ping du serveur à l'Arduino
+** Transmission des données au serveur.
+
+* Avoir créé une connexion entre le prototype de l'application client et la base 
+de données :
+** Requêtes et envoi de données du client au serveur.
+** Réponse du serveur.
+
+= PAN 3:
+* Le protocole MQTT malgré ses avantages a été abandonné pour une architecture plus directe:
+La communication s’effectue par lecture/ecriture dans une base de données MySQL.
+* Le module "Hardware" utilise une bibliothèque de communication directe Arduino/MySQL.
+* Le module "Android" idem.
+* Le module Client/Serveur fournis la table sur le réseau local, déploie la base de donnée et
+écris le code correspondant à la connexion dans chacun des modules directement.
+
+== PAN4: 
+ Le système de gestion SQL (bibliothèque SQLite) n'est conservé que dans la partie base de données. 
+ Evolution vers de protocoles simplifiés, plus rapide, et plus resistants aux bugs et utilisation de Sockets. 
+ Le serveur est déployé en Python (cf Module Base De Données) et est accessible en réseau global et non local. 
+ Les modules dépendant communique en Lecture/Ecriture avec le server par utilisation de socket. 
+ Pour les détails des protocoles et du parsing voir compte-rendu détaillé du PAN4 (pdf disponible d'ici le 14 mais sur le GIT) 
+ L'intégration est totale et robuste. 
+ 
+==== Bibliographie spécifique
+ 

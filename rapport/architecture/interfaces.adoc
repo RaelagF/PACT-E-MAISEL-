@@ -1,0 +1,112 @@
+////
+=== Description des interfaces
+
+Il faut ici une description textuelle de chaque interface, c’est à
+dire +
+chaque échange entre deux blocs. Si c’est une interface entre deux
+blocs +
+informatiques, c’est une interface Java. S’il y a des échanges de +
+données complexes, il faut en décrire le format avec grande précision.
+Si c’est une interface +
+entre deux blocs électroniques, c’est une description des signaux +
+électroniques. Etc.
+////
+
+
+# Interfaces entre les modules
+
+{empty} +
+
+L'ensemble de ces communications se fait via une connexion internet (wifi).
+
+{empty} +
+
+### Serveur <--> application Android :
+
+{empty} +
+
+* *Authentification :* permet à l'utilisateur de l'application de s'identifier.
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : identifiant (login), mot de passe.
+** _Données de sortie_ : booléen (l'authentification a-t-elle réussi ?).
+
+{empty} +
+
+* *Changement de mot de passe :* permet à l’utilisateur de l’application de changer son mot de passe.
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : login, nouveau mot de passe.
+** _Données de sortie_ : booléen (le changement a-t-il réussi ?).
+
+{empty} +
+
+* *Get état de la machine :* permet d'obtenir l'état actuel d'une des machines à laver.
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : numéro de la machine concernée.
+** _Données de sortie_ : état de la machine spécifiée (entier).
+
+{empty} +
+
+* *Set état de la machine :* modifie l'état actuel d'une des machines à laver, donc en pratique effectue ou annule une réservation.
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : login, numéro de la machine concernée, nouvel état (entier).
+** _Données de sortie_ : booléen (le changement a-t-il réussi ?).
+
+{empty} +
+
+* *Update affluence :* permet d'obtenir l'affluence actuelle d'une des cuisines.
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : numéro de l'étage concerné.
+** _Données de sortie_ : nombre de personnes, nombre de plaques utilisées.
+
+{empty} +
+
+* *Get stats maisel :* permet d'obtenir les statistiques d'utilisation de machines à laver ou de cuisines à une date donnée.
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : date, numéro de la machine ou de l'étage de la cuisine concernée.
+** _Données de sortie_ : nombre d'utilisations ou affluence.
+
+{empty} +
+
+* *Update mails :* permet de mettre à jour les notifications relatives aux mails (paiement, contrôle du ménage, événements ponctuels...) .
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : login (autres ?).
+** _Données de sortie_ : tableau contenant les prochaines échéances : date et nom de l'échéance.
+
+{empty} +
+
+* *Get stats babar :* permet d'obtenir les statistiques de consommation de l'utilisateur au bar du foyer.
+** _Initiateur_ : application Android.
+** _Données d'entrée_ : login (autres ?).
+** _Données de sortie_ : ? (à voir).
+
+{empty} +
+
+### Serveur <--> capteurs et composants physiques
+
+{empty} +
+
+* *Set état de la machine :* permet d'envoyer au serveur l'état actuel d'une des machines à laver.
+** _Initiateur_ : carte Arduino.
+** _Données d'entrée_ : numéro de la machine concernée, état de la machine (booléen : la machine est-elle en fonctionnement ?).
+** _Données de sortie_ : booléen (l'opération a-t-elle réussi ?).
+
+{empty} +
+
+* *Get état des LEDs :* met à jour la couleur des LEDs qui indiqueront pour chaque machine à laver si elle est libre, réservée, ou en fonctionnement.
+** _Initiateur_ : carte Arduino.
+** _Données d'entrée_ : numéro de la LED concernée.
+** _Données de sortie_ : couleur/état (entier).
+
+{empty} +
+
+* *Set état de la plaque :* permet d'envoyer au serveur l'état actuel d'une des plaques de cuisson.
+** _Initiateur_ : carte Arduino.
+** _Données d'entrée_ : numéro de la plaque concernée, état de la plaque (booléen : la plaque est-elle allumée ?)
+** _Données de sortie_ : booléen (l'opération a-t-elle réussi ?).
+
+{empty} +
+
+* *Set affluence :* indique au serveur quand une personne entre ou sort d'une cuisine.
+** _Initiateur_ : carte Arduino.
+** _Données d'entrée_ : incrémentation ou décrémentation (booléen ?).
+** _Données de sortie_ : booléen (l'opération a-t-elle réussi ?).

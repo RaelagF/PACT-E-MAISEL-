@@ -1,0 +1,37 @@
+=== Scénario d’usage
+
+Antoine-Raphaël, 20 ans, étudiant à Télécom, vit au neuvième étage de la Maisel. Le dimanche matin,
+Antoine-Raphaël se réveille, il regarde dans son placard, mais il n’a plus de pantalons. Bref, il doit faire
+une lessive. Il descend neuf étages, il n’y a pas de machine libre, il remonte neuf étages. Il redescend
+une heure plus tard sept étages, il a oublié sa lessive, il remonte sept étages. Il en a assez. Il décide
+d’attendre le week-end suivant et de faire la lessive chez ses parents.
+
+Le dimanche suivant, 19h, Antoine-Raphaël revient chez lui, heureux et avec son linge propre. Il
+s’arrête à l’accueil, il y a une lettre pour lui, mais il ne le sait pas et le guichet est fermé. Trois jours plus
+tard, il a enfin le temps de s’arrêter lorsque l’accueil est ouvert. Il récupère sa lettre. C’est un courrier
+l’informant que le cadeau de sa sœur commandé sur internet est arrivé à la poste. Il pouvait le retirer
+jusqu’à la veille avant renvoi. L’anniversaire de sa sœur est le lendemain. Énervé, il décide en dernier
+recours de lui préparer un gâteau. Il fait des courses, mais en arrivant dans la cuisine d’étage, il
+s’aperçoit que toutes les plaques sont prises. Il choisit de faire ça avant de partir. Le lendemain, 15
+minutes avant de partir chez sa sœur, il a préparé son gâteau et l’a laissé cuire dans le four de la
+cuisine. Il va le chercher, le gâteau n’est pas cuit. Il avait oublié que le courant s’arrêtait au bout d’un
+certain temps et qu’il fallait le relancer régulièrement. Il arrive donc chez sa sœur, sans cadeau, avec
+un gâteau cru et un costume sale – il avait oublié de l’emmener le week-end précédent.
+
+Antoine-Raphaël est étudiant à Télécom. Antoine-Raphaël, ça pourrait être vous. Ne soyez pas comme
+Antoine-Raphaël, adoptez E-Maisel. E-Maisel est une application qui centralise tous les services
+proposés à la Maisel :
+
+- Lessive : un capteur placé sur les machines permet de détecter si celles-ci sont libres ou non et
+d’envoyer cette information sur l’application. Il est maintenant aussi possible d’en réserver une
+pendant 5 minutes. Au bout de 5 minutes, la réservation est annulée, ce qui permet de ne pas
+créer de file d'attente.
+- Courrier : une notification est envoyée sur l’application dès qu’une lettre est captée.
+- Ménage : une notification est envoyée lorsqu’un contrôle de ménage ou une récupération des
+draps est prévue (en récupérant les titres des e-mails).
+- Bar : synchronisation des informations du site du bar.
+- Cuisine : un capteur sur le bouton des plaques permet de savoir si une plaque est libre,
+d’autres comptabilisent le nombre de personnes présentes dans la cuisine. Enfin, un minuteur
+permet de prévenir l’utilisateur de l’arrêt des plaques et du four.
+
+Depuis qu’Antoine-Raphaël utilise E-Maisel, sa vie a changé. Antoine-Raphaël ça pourrait être vous. 

@@ -1,0 +1,33 @@
+= Module Base de Données
+
+* Fang Guyu
+* Lanvin Alexandre
+
+Encadrant: Lajus Jonathan
+
+== Descriptions
+
+Ce module représente la gestion de toutes les données obtenues grâce aux capteurs,
+et il y a communication Arduino/serveur grâce à zigbee.Les données doivent ensuite
+être interprétées et envoyées à l’application. En gros, il y a 4 parties de données, 
+l'identifiant utilisateur,les états des machines à laver, l'occupation des cuisines et 
+des plaques et la présence de courrier. 
+
+== Avancement
+
+Objectif PAN2:
+
+* schéma logique de la base de donné
+
+Objectif PAN3:
+
+* créer la base de données et les tables correspondants aux differentes applications
+* écrire certaines fonctions definies dans l'interface
+
+Objectif PAN4:
+
+* séparer les données stockées dans le serveur et celles dans la base de données
+* protéger les données stockées dans le serveur par des verrous
+* compléter les fonctions définies dans l'interface
+* utiliser les multi-threads pour permettre des connections simultanées
+* utiliser le socket pour envoyer des données au Hardware et à l'application Androïd et recevoir leurs requêtes 

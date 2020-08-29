@@ -1,0 +1,123 @@
+#Avancement au PAN4
+
+{empty} +
+
+Les références des tests correspondent à ce plan de tests : include::plan de tests.adoc
+
+{empty} +
+
+### Communications serveur <--> application Android
+
+{empty} +
+
+* *Authentification :*
+** Cas 1, 2, 3 : 
+*** Ces cas d'erreurs sont gérés directement par l'application Android, sans transmission au serveur. En effet, ils posaient problème avec notre
+format de transmission des informations de connexion. Il est plus simple que ça soit l'application qui gère ces cas.
+** Cas 4, 5, 6: 
+*** Tests réalisés avec succès pour le PAN3 (~15/03).
+** Ajout : création d'un nouveau compte
+*** entrée : nom d'utilisateur nouveau, mot de passe
+*** sortie : la création de compte a réussi
+*** Tests réalisés avec succès pour le PAN4 (~10/04).
+
+{empty} +
+
+* *Changement de mot de passe :*
+** Cas 1, 2, 3 :
+***Tests réalisés avec succès pour le PAN4 (~27/04).
+
+
+{empty} +
+
+* *Get état de la machine :* 
+** Cas 1: 
+*** Test réalisé avec succès pour le PAN3, mais avec deux serveurs distincts (un qui communique avec Android, l'autre avec les capteurs) à cause
+d'un format différent de base de données et de protocoles. (~15/03)
+*** Test réalisé avec succès pour le PAN4 avec un seul serveur (intégration finale). (~27/04)
+
+{empty} +
+
+* *Set état de la machine :* 
+** Cas 1, 2, 3:
+*** Tests réalisés avec succès pour le PAN3, mais avec deux serveurs distincts (un qui communique avec Android, l'autre avec les capteurs) à cause
+d'un format différent de base de données et de protocoles. (~15/03)
+*** Tests réalisés avec succès pour le PAN4 avec un seul serveur (intégration finale). (~27/04)
+** Ajout : tester si une personne ne réserve pas 2 machines simultanément
+*** entrée : réservation d'une 2ème machine depuis l'application
+*** sortie : message d'erreur : impossible de réserver 2 machines à la fois
+*** Test réalisé avec succès pour le PAN4. (~12/05)
+
+{empty} +
+
+* *Update affluence :*
+** Cas 1: 
+*** Test réalisé avec succès pour le PAN4, que ce soit pour le nombre de personnes ou le nombre de plaques utilisées. (~12/05)
+
+{empty} +
+
+* *Get stats maisel :*
+** La fonctionnalité des statistiques a été implémentée dans la base de données du serveur, mais pas dans l'application Android.
+En effet, l'affichage de statistiques demandait d'utiliser une librairie graphique complexe, et le module Android a préféré se concentrer sur
+la finalisation des autres fonctionnalités. En conséquence, pas d'intégration des statistiques, et pas de tests d'intégration.
+
+
+{empty} +
+
+* *Update mails :* 
+** Cette fonctionnalité a finalement été réalisée de façon interne au module Android (récupération de mails par le protocole IMAP), sans appel au 
+serveur. Elle ne relève donc pas de l'intégration. Pas de tests d'intégration.
+
+{empty} +
+
+* *Ajout : get courrier :*
+** entrée : actualisation de la page courrier, identifiant
+** sortie : données actualisées : y a-t-il du courrier dans le casier correspondant ?
+** Fonctionnalité implémentée pour un seul casier, l'identifiant n'est pas transmis. En effet, la détection du courrier par traitement vidéo 
+n'est réalisée que pour une vidéo test.
+** Test partiel réalisé avec succès pour le PAN4. (~12/05)
+
+
+{empty} +
+
+### Communications serveur <--> capteurs et composants physiques
+
+{empty} +
+
+* *Set état de la machine :*
+** Cas 1: 
+*** Tests réalisés avec succès pour le PAN3, mais avec deux serveurs distincts (un qui communique avec Android, l'autre avec les capteurs) à cause
+d'un format différent de base de données et de protocoles. (~15/03)
+*** Tests réalisés avec succès pour le PAN4 avec un seul serveur (intégration finale). (~27/04)
+
+
+{empty} +
+
+* *Get état des LEDs :* 
+** Cas 1: 
+*** Tests réalisés avec succès pour le PAN3, mais avec deux serveurs distincts (un qui communique avec Android, l'autre avec les capteurs) à cause
+d'un format différent de base de données et de protocoles. (~15/03)
+*** Tests réalisés avec succès pour le PAN4 avec un seul serveur (intégration finale). (~27/04)
+
+
+{empty} +
+
+* *Set état de la plaque :* 
+** Cas 1: 
+*** Tests réalisés avec succès pour le PAN4. (~27/04)
+
+
+{empty} +
+
+* *Set affluence :* 
+** Cas 1: 
+*** Tests réalisés avec succès pour le PAN4. (~27/04)
+
+{empty} +
+
+* *Ajout : get courrier, par traitement vidéo*
+** entrée : vidéo en temps réel des casiers à courrier
+** sortie : pour chaque casier, y a-t-il du courrier dedans ?
+** Fonctionnalité partiellement implémentée, car nous ne pouvons pas filmer les casiers en conditions réelles. Notre seule donnée de test est une 
+vidéo réalisée artificiellement pour tester lorsque l'on insère ou enlève une lettre.
+** Test partiel (avec la vidéo de test) réalisé avec succès pour le PAN4 (~12/05).

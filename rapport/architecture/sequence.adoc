@@ -1,0 +1,6 @@
+=== Diagramme de séquence
+
+image:../images/Activité.png[Diagramme de séquence]
+
+
+

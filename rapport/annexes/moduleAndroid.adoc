@@ -1,0 +1,111 @@
+=== Module Android
+
+* Zoé Berenger
+* Alexandre Lanvin
+
+Encadrant : Thomas Robert
+
+==== Descriptions
+
+Ce module comporte plusieurs sous-modules :
+
+* Interface graphique : sous-module plutôt simple qui consiste en un code Java
+proposant toutes les fonctionnalités décrites dans le diagramme de séquence.
+
+* Intégration des courriels de la Maisel : sous-module plus complexe qui a pour
+objectif de récupérer l'objet ou le message général de ces courriels afin de
+les incorporer à notre application et de centraliser les informations de la
+Maisel. La difficulté résulte dans l'accès au contenu de ces e-mails, qui dépend
+de la messagerie utilisée.
+
+==== Réunions
+
+* Réunion expert Android du 14/12/2017
+
+Participants : BERENGER Zoé, LANVIN Alexandre
+
+Planification des objectifs et échéances du module Android.
+
+* Réunion expert Android du 18/01/2018
+
+Participants : BERENGER Zoé, LANVIN Alexandre
+
+Premier retour sur le rapport de conception. Quelques points à éclaircir, nouveau
+rendu pour le 25/01.
+
+* Réunion expert Android du 01/02/2018
+
+Participants : BERENGER Zoé, LANVIN Alexandre
+
+Soutenance de PAN2 : présentation de l'avancement de notre application. Retour
+final sur notre rapport de conception, analyse de la cohérence de l'application
+avec ce dernier.
+
+* Réunion expert Android du 09/02/2018
+
+Participants : BERENGER Zoé
+
+Demande de conseils quant à des problèmes concernant la création de boîtes de
+dialogue.
+Problème désormais résolu.
+
+* Réunion expert Android du 15/03/2018
+
+Participants : BERENGER Zoé, LANVIN Alexandre
+
+Le but de cette réunion était de régler un bug sur l'application du au cycle de
+vie d'une activité. En effet lorsqu'une activité est fermée pour en ouvrir une autre,
+le contenu est détruit, et doit donc être recréé par la suite pour que les
+paramètres de l'activité réapparaissent.
+Des tests sont donc à effectuer pour régler ce bug.
+
+* Réunion expert Android du 03/05/2018
+
+Participantes : BERENGER Zoé, LANVIN Alexandre
+
+Réunion pré-PAN4. Mise au point pour le PAN4. Résolution du problème quant aux boîtes 
+de dialogue qui ne s'affichaient pas après un retour sur la page relative à la lingerie.
+Solution trouvée: Récupérer les boutons depuis le layout dans le onResume et pas seulement 
+dans le onCreate
+
+
+Discussion sur la mainière de récuperer des éléments depuis des boîtes mails dont le 
+protocole se réalise sur un autre thread et ce avant que le design du layout soit chargé.
+Solution trouvée: Utiliser des ListAdapter.
+
+==== Avancement
+
+Échéances :
+
+* 11/01 rendu du rapport de conception détaillé de l'application android
+Contenu attendu dans le rapport de conception détaillé : la structure des
+activités (version finales) + une analyse des composants clés
+(si vous utilisez des classes externes -> documentez l'usage)
+
+* 25/01 prototype application android fonctionnelle sans l'intégration des
+communications mais avec des données d'entrées suffisamment réalistes (ie données synthétiques)
+Le prototype peut couvrir un sous ensemble de la version finale
+
+Objectifs PAN2 :
+
+* Avoir trouvé et documenté un moyen d'accès à ces courriels.
+* Premier prototype pour l'interface.
+
+Objectifs PAN3 :
+
+* Faire l'intégration d'au moins une partie de l'application, avec toutes les fonctionnalités opérationnelles.
+(Nous avons choisi la laverie pour cette étape).
+* Prototype plus avancé de l'interface
+
+Objectifs PAN4:
+
+* Finalisation du design
+* Intégration complète
+* Récupération des mails dans les Notifications
+* Rassemblement de tous les paramètres dans l'activité correspondante
+* Mise au point des activités déjà réalisées
+
+
+==== Bibliographie spécifique
+
+cf. annexe/avancement

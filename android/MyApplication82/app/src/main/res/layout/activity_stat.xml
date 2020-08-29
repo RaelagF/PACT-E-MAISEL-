@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/stat_text"
+            android:layout_width="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Statistiques"
+            android:textColor="#ff0000"
+            android:textSize="35dp" />
+
+        <Spinner
+            android:id="@+id/stat_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/stat_spinner_text"
+            android:layout_below="@id/stat_text"/>
+
+        <TextView
+            android:id="@+id/day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Choisir le jour : "
+            android:layout_below="@id/stat_spinner"/>
+
+        <Spinner
+            android:id="@+id/day_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/day_text"
+            android:layout_below="@id/stat_spinner"/>
+
+        <TextView
+            android:id="@+id/stat_spinner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Choisir l'étage : "
+            android:layout_below="@id/stat_text"/>
+
+        <com.github.mikephil.charting..charts.BarChart
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/bargraph"
+            android:layout_below="@id/day_spinner"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,172 @@
+# Description détaillée des messages entre les composantes des modules
+
+{empty} +
+
+Voici la description des dialogues listés dans le diagramme : fonction, début et fin, paramètres, effets locaux.
+
+{empty} +
+
+### Communications serveur <--> application Android
+
+{empty} +
+
+* *Authentification :* permet à l'utilisateur de l'application de s'identifier.
+** _Début_.
+** _Application -> serveur_ : demande d'authentification.
+*** Données : identifiant (login), mot de passe.
+*** Effet : consultation de la base de données d'authentification.
+** _Serveur -> application_ : confirmation du bon déroulement de l’opération.
+*** Données : booléen (l'authentification a-t-elle réussi ?).
+*** Effet : message de réussite ou d'échec de l'opération à l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+* *Changement de mot de passe :* permet à l’utilisateur de l’application de changer son mot de passe.
+** _Début_.
+** _Application -> serveur_ : demande de changement de mot de passe.
+*** Données : nouveau mot de passe. +
+(À voir avec le serveur s'il y a besoin de transmettre l'identifiant et l'ancien mot de passe.)
+*** Effet : écriture du nouveau mot de passe dans la base de données d'authentification.
+** _Serveur -> application_ : confirmation du bon déroulement de l’opération.
+*** Données : booléen (le changement a-t-il réussi ?).
+*** Effet : message de réussite ou d'échec de l'opération à l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+* *Get état de la machine :* permet d'obtenir l'état actuel d'une des machines à laver.
+** _Début_.
+** _Application -> serveur_ : demande de l'état de la machine à laver spécifiée (libre, réservée, en fonctionnement).
+*** Données : numéro de la machine concernée.
+*** Effet : consultation de la base de données sur les machines à laver.
+** _Serveur -> application_ : réponse.
+*** Données : état de la machine spécifiée (entier).
+*** Effet : réponse affichée pour l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+* *Set état de la machine :* modifie l'état actuel d'une des machines à laver, donc en pratique effectue ou annule une réservation.
+** _Début_.
+** _Application -> serveur_ : demande de changement de l'état de la machine à laver spécifiée.
+*** Données : numéro de la machine concernée, nouvel état (entier).
+*** Effet : vérification du paramètre d'état, écriture dans la base de données sur les machines à laver.
+** _Serveur -> application_ : confirmation du bon déroulement de l’opération.
+*** Données : booléen (le changement a-t-il réussi ?).
+*** Effet : message de réussite ou d'échec de l'opération à l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+* *Update affluence :* permet d'obtenir l'affluence actuelle d'une des cuisines.
+** _Début_.
+** _Application -> serveur_ : demande de l'affluence de la cuisine de l'étage spécifié (nombre de personnes, nombre de plaques utilisées).
+*** Données : numéro de l'étage concerné.
+*** Effet : consultation de la base de données sur les cuisines.
+** _Serveur -> application_ : réponse.
+*** Données : nombre de personnes, nombre de plaques utilisées.
+*** Effet : réponse affichée pour l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+* *Get stats maisel :* permet d'obtenir les statistiques d'utilisation de machines à laver ou de cuisines à une date donnée.
+** _Début_.
+** _Application -> serveur_ : demande des données d'utilisation de la machine ou de la cuisine à la date spécifiée.
+*** Données : date, numéro de la machine ou de l'étage de la cuisine concernée.
+*** Effet : consultation de la base de données correspondante.
+** _Serveur -> application_ : réponse.
+*** Données : nombre d'utilisations ou affluence.
+*** Effet : réponse affichée pour l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+* *Update mails :* permet de mettre à jour les notifications relatives aux mails (paiement, contrôle du ménage, événements ponctuels...) .
+** _Début_.
+** _Application -> serveur_ : demande de mise à jour des mails reçus de la Maisel.
+*** Données : identifiant (autres ?).
+*** Effet : accès aux mails...
+** _Serveur -> application_ : réponse.
+*** Données : tableau contenant les prochaines échéances : date et nom de l'échéance.
+*** Effet : réponse affichée pour l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+* *Get stats babar :* permet d'obtenir les statistiques de consommation de l'utilisateur au bar du foyer.
+** _Début_.
+** _Application -> serveur_ : demande des données de consommation de l'utilisateur.
+*** Données : identifiant (autres ?).
+*** Effet : accès au site du bar...
+** _Serveur -> application_ : réponse.
+*** Données : ? (à voir).
+*** Effet : réponse affichée pour l'utilisateur.
+** _Fin_.
+
+{empty} +
+
+### Communications serveur <--> capteurs et composants physiques
+
+{empty} +
+
+* *Get état de la machine :* permet d'obtenir l'état actuel d'une des machines à laver.
+** _Début_.
+** _Serveur -> contrôleur des capteurs de vibration_ : demande de l'état de la machine à laver spécifiée (libre, en fonctionnement (la réservation est du ressort de la base de données)).
+*** Données : numéro de la machine concernée.
+*** Effet : traitement des données des capteurs.
+** _Contrôleur -> serveur_ : réponse.
+*** Données : état de la machine spécifiée (booléen : la machine est-elle en fonctionnement ?).
+*** Effet : écriture dans la base de données sur les machines à laver.
+** _Fin_.
+
+{empty} +
+
+* *Set état des LEDs :* met à jour la couleur des LEDs qui indiqueront pour chaque machine à laver si elle est libre, réservée, ou en fonctionnement.
+** _Début_.
+** _Serveur -> contrôleur des LEDs_ : demande de changement de la couleur de la LED spécifiée pour l'une des 3 possibles (une par état possible de la machine correspondante).
+*** Données : numéro de la LED concernée, couleur/état (entier).
+*** Effet : modification de la couleur de la LED.
+** _Contrôleur -> serveur_ : confirmation de la réception du message et du bon déroulement de l'opération.
+*** Données : booléen (l'opération a-t-elle réussi ?).
+*** Effet : si échec, réitérer l'opération.
+** _Fin_.
+
+{empty} +
+
+* *Get état de la plaque :* permet de savoir si une plaque de cuisson est actuellement allumée ou non.
+** _Début_.
+** _Serveur -> contrôleur des capteurs de courant électrique_ : demande de l'état de la plaque de cuisson spécifiée (éteinte, allumée).
+*** Données : numéro de la plaque concernée.
+*** Effet : traitement des données des capteurs.
+** _Contrôleur -> serveur_ : réponse.
+*** Données : état de la plaque spécifiée (booléen : la plaque est-elle allumée ?).
+*** Effet : écriture dans la base de données sur les cuisines.
+** _Fin_.
+
+{empty} +
+
+* *Set affluence :* indique au serveur quand une personne entre ou sort d'une cuisine.
+** _Début_.
+** _Contrôleur des capteurs optiques -> serveur_ : demande de changement du nombre de personnes mémorisé pour la cuisine concernée.
+*** Données : incrémentation ou décrémentation (booléen ?).
+*** Effet : écriture dans la base de données sur les cuisines.
+** _Serveur -> contrôleur_ : confirmation de la réception du message et du bon déroulement de l’opération.
+*** Données : booléen (l'opération a-t-elle réussi ?).
+*** Effet : si échec, réitérer l'opération.
+** _Fin_.
+
+{empty} +
+
+### Communications notre serveur <--> serveurs externes (à venir)
+
+{empty} +
+
+* Notre serveur <--> serveur des mails ?
+
+{empty} +
+
+* Notre serveur <--> site du bar ?
+
+{empty} +

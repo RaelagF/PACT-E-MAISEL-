@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/settings_deconnect_button"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/deconnect"
+        android:onClick="finish"
+        />
+
+    <TextView
+        android:id="@+id/settings_spinner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Numéro de la chambre :"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="#79a29d"
+        android:layout_below="@id/settings_deconnect_button"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Chambre"
+        android:inputType="text"
+        android:layout_below="@id/settings_spinner_text"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/RoomEditText" />
+
+    <TextView
+        android:id="@+id/separation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--------------------------------------------------"
+        android:textColor="#79a29d"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_below="@id/RoomEditText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identifiant :"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="#79a29d"
+        android:id="@+id/idText"
+        android:layout_below="@id/separation"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Identifiant"
+        android:inputType="text"
+        android:layout_below="@id/idText"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/idEditText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrer l'ancien mot de passe :"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="#79a29d"
+        android:id="@+id/previousPasswordText"
+        android:layout_below="@id/idEditText"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Ancien mot de passe"
+        android:inputType="textPassword"
+        android:layout_below="@id/previousPasswordText"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/previousPasswordEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrer le nouveau mot de passe : "
+        android:layout_marginHorizontal="20dp"
+        android:textColor="#79a29d"
+        android:id="@+id/newPasswordText"
+        android:layout_below="@id/previousPasswordEditText"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Nouveau mot de passe"
+        android:inputType="textPassword"
+        android:layout_below="@id/newPasswordText"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/newPasswordEditText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmer le nouveau mot de passe :"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="#79a29d"
+        android:id="@+id/newPasswordTextBis"
+        android:layout_below="@id/newPasswordEditText"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Nouveau mot de passe"
+        android:layout_below="@id/newPasswordTextBis"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/newPasswordEditTextBis"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Changer le mot de passe"
+        android:textColor="@color/white"
+        android:background="#79a29d"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="25dp"
+        android:id="@+id/changeButton"
+        android:layout_below="@id/newPasswordEditTextBis"/>
+
+</RelativeLayout>

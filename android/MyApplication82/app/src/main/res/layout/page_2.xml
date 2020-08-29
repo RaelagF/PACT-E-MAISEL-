@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minuteur"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:textColor="#ff0000"/>
+
+        <ImageButton
+            android:id="@+id/minuteur_deconnect_button"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/deconnect"
+            android:onClick="finish"
+            android:layout_below="@id/laverie_toolbar"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <Chronometer
+                android:id="@+id/chronometre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:onClick="startChronometer"
+                android:layout_below="@id/chronometre"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:onClick="stopChronometer"
+                android:layout_toRightOf="@id/button1"
+                android:layout_below="@id/chronometre"/>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

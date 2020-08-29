@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexa.myapplication.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <TextView
+            android:id="@+id/cuisineId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuisine"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/minuteurButton"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:onClick="page1"
+            android:text="Minuteur"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="170dp"
+            tools:layout_editor_absoluteY="58dp"
+            android:layout_alignParentBottom="true" />
+
+
+        <ImageButton
+            android:id="@+id/statButton"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/stats"
+            android:onClick="page_1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/spinner_text"
+            android:layout_below="@id/cuisineId"/>
+
+        <TextView
+            android:id="@+id/spinner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Choisir l'étage : "
+            android:layout_below="@id/cuisineId"/>
+
+        <TextView
+            android:id="@+id/personnes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de personnes présentes :"
+            android:layout_below="@id/spinner"/>
+
+        <TextView
+            android:id="@+id/plaques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personnes"
+            android:text="Nombre de plaques disponibles :"/>
+
+        <ImageButton
+            android:id="@+id/cuisine_deconnect_button"
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/deconnect"
+            android:onClick="finish"
+            />
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

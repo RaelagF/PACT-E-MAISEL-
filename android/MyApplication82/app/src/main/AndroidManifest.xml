@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alexa.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_emaisel"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AccueilActivity">
+            android:label="Accueil Activity">
+        </activity>
+        <activity android:name=".NotificationsActivity">
+            android:label="Notifications Activity"
+            android:parentActivityName=".AccueilActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccueilActivity" />
+        </activity>
+        <activity android:name=".ParametresActivity">
+            android:label="Paramètres Activity"
+            android:parentActivityName=".AccueilActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccueilActivity" />
+        </activity>
+        <activity android:name=".LaverieActivity">
+            android:label="Laverie Activity"
+            android:parentActivityName=".AccueilActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccueilActivity" />
+        </activity>
+        <activity android:name=".CuisineActivity">
+            android:label="Cuisine Activity"
+            android:parentActivityName=".EtageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CuisineActivity" />
+        </activity>
+        <activity
+            android:name=".ChronoActivity"
+            android:label="Page 2"
+            android:parentActivityName=".CuisineActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CuisineActivity" />
+        </activity>
+        <activity
+            android:name=".StatActivity"
+            android:label="Page 3"
+            android:parentActivityName=".CuisineActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CuisineActivity" />
+        </activity>
+        <activity android:name=".InfoActivity">
+            android:label="Information Activity"
+            android:parentActivityName=".AccueilActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AccueilActivity" />
+        </activity>
+
+        <service
+            android:name=".MailService"
+            android:exported="false"/>
+    </application>
+
+</manifest>

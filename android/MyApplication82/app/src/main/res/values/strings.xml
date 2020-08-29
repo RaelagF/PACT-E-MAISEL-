@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">e-Maisel</string>
+    <string name="title_activity_accueil">AccueilActivity</string>
+    <string name="username">Identifiant</string>
+    <string name="password">Mot de passe</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="newid">Créer un compte</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="action_refresh">refresh</string>
+    <string name="letter">Vous avez du courrier !</string>
+
+    <string name="refresh">refresh</string>
+    <string name="reserved_msg">Cette machine est déjà réservée, veuillez en sélectionner une autre.</string>
+    <string name="occupied_msg">Machine en cours d\'utilisation. </string>
+    <string name="reservation_limit">Vous avez déjà reservé une machine ! </string>
+    <string name="reservation">Voulez vous réserver cette machine ? </string>
+    <string name="reservation_succeeded">Votre réservation a bien été effectuée. </string>
+    <string name="problem">Sorry, some unknown problem happened. Please try again. </string>
+    <string name="cancel_reservation">Voulez-vous annuler cette réservation ? </string>
+    <string name="cancel_reservation_succeeded">Votre réservation a été annulée. </string>
+    <string name="oui">Oui </string>
+    <string name="non">Non </string>
+    <string name="affluence">Nombre de personnes présentes :  </string>
+    <string name="stoves">Nombre de plaques disponibles :  </string>
+
+
+    <string-array name="etage_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="day_array">
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+        <item>Samedi</item>
+        <item>Dimanche</item>
+    </string-array>
+
+</resources>
+
+
+
+

@@ -1,0 +1,43 @@
+=== Module Hardware 
+* Soline Hayes
+* Florian Laborde
+
+==== Descriptions
+== Voilà une rapide clarification de notre projet. 
+
+        *Courrier*: Le boîtes de courrier de la Maisel sont assez spécifiques, on pourrait mettre un capteur laser, on suppose que l'enveloppe et blanche et réfléchie fortement toute onde proche du visible. https://fr.aliexpress.com/item/New-Arrival-VL6180-High-Accuracy-Range-Finder-Optical-Ranging-Sensor-for-Arduino/32770189152.html[https://fr.aliexpress.com/item/New-Arrival-VL6180-High-Accuracy-Range-Finder-Optical-Ranging-Sensor-for-Arduino/32770189152.html] 
+
+        *Cuisine:* Il s'agit de savoir si les plaques sont allumés et même combien sont allumés. Afin de ne pas accéder directement au circuit on utilise un capteur à boucle de courant pour déduire l'activité des plaques; voilà un exemple de capteur programmable sur Arduino: https://www.olimex.com/Products/Components/Sensors/SNS-CURRENT-CT013-100A/[https://www.olimex.com/Products/Components/Sensors/SNS-CURRENT-CT013-100A/]
+
+        *Laverie*: Il s'agit de savoir quelles machines fonctionnent, on suppose qu'une machine à laver vibre en fonctionnement. On se propose de mettre un "capteur de vibration" dont DX propose un exemplaire lui aussi implémentable via Arduino: dx_digital-vibration-switch-sensor +
+http://www.dx.com/fr/p/arduino-compatible-digital-vibration-switch-sensor-module-142188[http://www.dx.com/fr/p/arduino-compatible-digital-vibration-switch-sensor-module-142188] 
+
+        Pour ce qui est de la communication entre les appareils on souhaite utiliser un réseau wifi avec les modules sparkfun suivants: https://www.sparkfun.com/products/13804[https://www.sparkfun.com/products/13804] 
+
+Pour les protocoles de communication, il est difficile de trouver un serveur ad-hoc qui nous est propre car la laverie et le courrier par exemple sont bien trop loin l'un de l'autre. Je pense que le meilleur moyen serait de contacter l'association Rezel et voir avec eux si il serait possible de se connecter directement sur le réseau avec un identifiant dédié. On pourrait alors pinger les cartes wifi pour qu'elle renvoie pour le courrier par exemple: n booléens correspondants à la présence du courrier dans les n boîtes aux lettres; un entier pour chaque étage correspondant au nombre de plaques disponibles etc... L'information que nous allons véhiculer reste donc relativement peu gourmande en memoire pour l'instant. Si l'on souhaite faire un système de reservation il faudra avoir des fréquences d'actualisation plus élevées et peut être envoyer plus d'informations.
+
+Soline Hayes et Florian Laborde (PACT 2.1)
+== Retour 
+    William de la Maisel 1 pense que ce n'est pas gênant qu'ils appuient pour dire si le courrier est présent. 
+
+
+
+==== Avancement
+== PAN3
+ Nous retenons pour l'intégration du PAN 3 la mise en service de la laverie.
+ Le système détécte la vibration, change la valeur de l'état de la machine sur le serveur.
+ Le système lis la base de donnée et change la valeur des réservations/états et affiche des leds de la couleur adaptée. 
+ Le système permet à l'utilisateur de le connecter au réseau sans "hard-coding". 
+ Le système est "user-friendly" cf SES. 
+ Une seule machine est traitée pour l'intégration, le réseau est local. 
+ Le système général de fonctionnement est identique pour la cuisine seul les capteurs sont différents. 
+ 
+== PAN4
+    Pour le rendu final nous avons perfectionné le fonctionnement de nos appereils. 
+    Le code est plus robuste et l'execution des mises à jour plus rapide. 
+    Les systèmes materiels sont protégés dans des boites. 
+    L'interraction avec le système est intuitive. 
+    Le réseau est global. 
+    L'intégration est totale. 
+
+==== Bibliographie spécifique
